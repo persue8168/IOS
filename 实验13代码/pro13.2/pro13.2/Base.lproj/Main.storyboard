@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Ose-uZ-V3h">
+            <objects>
+                <navigationController id="Ggl-dJ-coI" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Lab-cz-dQT">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Vm4-ZX-8UD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FMA-iC-iBo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-833" y="166"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="pro13_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bd2-LX-LQc">
+                                <rect key="frame" x="21" y="173" width="338" height="468"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="522" id="5jZ-Of-QFF"/>
+                                </constraints>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Hj7-0D-PJf">
+                                <rect key="frame" x="64" y="131" width="224" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVl-lp-u6h">
+                                <rect key="frame" x="21" y="131" width="34" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="34" id="iJQ-xb-zeb"/>
+                                </constraints>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="back:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Nm-IO-Wd7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Khr-Po-QeP">
+                                <rect key="frame" x="64" y="74" width="53" height="30"/>
+                                <state key="normal" title="forward"/>
+                                <connections>
+                                    <action selector="forward:" destination="BYZ-38-t0r" eventType="touchUpInside" id="601-t1-kdH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rel-uT-lnQ">
+                                <rect key="frame" x="164" y="74" width="47" height="30"/>
+                                <state key="normal" title="Reload"/>
+                                <connections>
+                                    <action selector="reload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pbg-lX-lCh"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="h9f-kt-jps">
+                                <rect key="frame" x="21" y="649" width="338" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fja-HW-6qf">
+                                <rect key="frame" x="321" y="131" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="MPq-j5-sOf"/>
+                                </constraints>
+                                <state key="normal" title="Go"/>
+                                <connections>
+                                    <action selector="go:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VxS-HQ-btF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zT1-XE-bAX">
+                                <rect key="frame" x="277" y="74" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="cvS-Qm-Zzx"/>
+                                </constraints>
+                                <state key="normal" title="Local"/>
+                                <connections>
+                                    <action selector="local:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fix-ab-SuB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Bd2-LX-LQc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="21" id="5qS-Sp-kHN"/>
+                            <constraint firstItem="rel-uT-lnQ" firstAttribute="leading" secondItem="Khr-Po-QeP" secondAttribute="trailing" constant="56" id="6g5-hO-nDb"/>
+                            <constraint firstItem="Khr-Po-QeP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="72" id="EWu-1v-FZE"/>
+                            <constraint firstItem="Bd2-LX-LQc" firstAttribute="leading" secondItem="UVl-lp-u6h" secondAttribute="leading" id="EjQ-1f-9xD"/>
+                            <constraint firstItem="Hj7-0D-PJf" firstAttribute="leading" secondItem="UVl-lp-u6h" secondAttribute="trailing" constant="8" symbolic="YES" id="GkT-v3-4oc"/>
+                            <constraint firstItem="Khr-Po-QeP" firstAttribute="baseline" secondItem="rel-uT-lnQ" secondAttribute="baseline" id="Ix1-kj-2x6"/>
+                            <constraint firstItem="Bd2-LX-LQc" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Kxp-st-sjB"/>
+                            <constraint firstItem="zT1-XE-bAX" firstAttribute="leading" secondItem="rel-uT-lnQ" secondAttribute="trailing" constant="66" id="L8o-17-6V8"/>
+                            <constraint firstItem="UVl-lp-u6h" firstAttribute="top" secondItem="Hj7-0D-PJf" secondAttribute="top" id="P7e-Ed-2ej"/>
+                            <constraint firstItem="fja-HW-6qf" firstAttribute="baseline" secondItem="UVl-lp-u6h" secondAttribute="baseline" id="VNy-7H-pmg"/>
+                            <constraint firstItem="zT1-XE-bAX" firstAttribute="baseline" secondItem="rel-uT-lnQ" secondAttribute="baseline" id="VRQ-sj-Td6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Bd2-LX-LQc" secondAttribute="bottom" constant="26" id="Woq-Ce-9I1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fja-HW-6qf" secondAttribute="trailing" constant="24" id="eVi-YJ-EZl"/>
+                            <constraint firstItem="Bd2-LX-LQc" firstAttribute="top" secondItem="Hj7-0D-PJf" secondAttribute="bottom" constant="16" id="fU1-dh-l8y"/>
+                            <constraint firstItem="Khr-Po-QeP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="6" id="kbm-HR-qOq"/>
+                            <constraint firstItem="fja-HW-6qf" firstAttribute="leading" secondItem="Hj7-0D-PJf" secondAttribute="trailing" constant="33" id="ybd-hq-2xZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BUW-bg-5Th"/>
+                    <connections>
+                        <outlet property="progressView" destination="h9f-kt-jps" id="Z2w-An-uzz"/>
+                        <outlet property="urlTF" destination="Hj7-0D-PJf" id="alK-T1-Y2y"/>
+                        <outlet property="webView" destination="Bd2-LX-LQc" id="Wc9-MB-KBp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
